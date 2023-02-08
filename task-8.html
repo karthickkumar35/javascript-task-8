@@ -8,7 +8,6 @@
 		let a = new Date();
 		document.write(a.toLocaleDateString());
 		document.write("<br>");
-		
 		let b = parseInt(a.getHours());
 		
 		if(b>=0 && b<12){
@@ -25,6 +24,30 @@
 		}
 		else if(b>18 && b<=24){
 			document.write("night");
+			document.write("<br>");
+		}
+		//------time prompt--------
+		let z = parseInt(prompt("enter the hour"));
+		a.setHours(z);
+		var j=a.getHours();
+		if(j>=0 && j<12){
+			document.write("morning");
+			document.write("<br>");
+		}
+		else if(j>=12 && j<=15) {
+			document.write("afternoon");
+			document.write("<br>");
+		}
+		else if(j>15 && j<=18) {
+			document.write("evening");
+			document.write("<br>");
+		}
+		else if(j>18 && j<=24){
+			document.write("night");
+			document.write("<br>");
+		}
+		else{
+			document.write("ERROR ==> enter the number 0 to 23");
 			document.write("<br>");
 		}
 		//------month-------
@@ -46,7 +69,9 @@
 			document.write("<br>");
 		}
 		//------month-------
-		let d = parseInt(prompt("Enter the month"))
+		let x = parseInt(prompt("Enter the month"))
+		a.setMonth(x);
+		var d =a.getMonth();
 		if(0<=d && d<=3){
 			document.write("spring season");
 			document.write("<br>");
