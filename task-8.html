@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math-Date</title>
+</head>
+<body>
+	<script>	
+		let a = new Date();
+		document.write(a.toLocaleDateString());
+		document.write("<br>");
+		
+		let b = parseInt(a.getHours());
+		
+		if(b>=0 && b<12){
+			document.write("morning");
+			document.write("<br>");
+		}
+		else if(b>=12 && b<=15) {
+			document.write("afternoon");
+			document.write("<br>");
+		}
+		else if(b>15 && b<=18) {
+			document.write("evening");
+			document.write("<br>");
+		}
+		else if(b>18 && b<=24){
+			document.write("night");
+			document.write("<br>");
+		}
+		//------month-------
+		let c = a.getMonth();
+		if(0<=c && c<=3){
+			document.write("current month is spring season");
+			document.write("<br>");
+		}
+		else if(4<=c && c<=7){
+			document.write("current month is summer season");
+			document.write("<br>");
+		}
+		else if(8<=c && c<=11){
+			document.write("current month is winter season");
+			document.write("<br>");
+		}
+		else{
+			document.write("ERROR");
+			document.write("<br>");
+		}
+		//------month-------
+		let d = parseInt(prompt("Enter the month"))
+		if(0<=d && d<=3){
+			document.write("spring season");
+			document.write("<br>");
+		}
+		else if(4<=d && d<=7){
+			document.write("summer season");
+			document.write("<br>");
+		}
+		else if(8<=d && d<=11){
+			document.write("winter season");
+			document.write("<br>");
+		}
+		else{
+			document.write("ERROR ==> enter the number 0 to 11");
+			document.write("<br>");
+		}
+	</script>
+</body>
+</html>
